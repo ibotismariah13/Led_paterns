@@ -26,6 +26,7 @@ void showProgramCleanUp(long delayTime) {
   FastLED.show();
   delay(delayTime);
 }
+//switches the color of the whole strip
 void colorSwitch(CRGB color1, CRGB color2, long delayTime,int num) {
   for (int n=num; n>0; n--){
   
@@ -103,6 +104,7 @@ void colorSwitch(CRGB color1, CRGB color2, long delayTime,int num) {
     delayTime = delayTime*.25;
     }
     }
+    //alternate flasshing
    void checkerFlash( CRGB color1, CRGB color2,  long delayTime, int num){
  
  for (int n = num; n>0; --n) {
@@ -136,6 +138,7 @@ void colorSwitch(CRGB color1, CRGB color2, long delayTime,int num) {
 
     }
     }
+    
 // follows then follows back
 void backwards (  long delayTime){
 
