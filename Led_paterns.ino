@@ -194,7 +194,7 @@ void backwards (  long delayTime){
 
 void loop() {
   // put your main code here, to run repeatedly:
-/*   checkerFlash(CRGB::Blue,CRGB::Red,  500, 5);
+  checkerFlash(CRGB::Blue,CRGB::Red,  500, 5);
     colorSwitch(CRGB::Blue,CRGB::Red,  500, 5);
     
    checkerFlash(CRGB::Blue,CRGB::Yellow,  500,5);
@@ -260,10 +260,7 @@ void loop() {
  coil(CRGB::Black,CRGB::Yellow,75);
  coil(CRGB::Orange,CRGB::Maroon,75);
  coil(CRGB::Red,CRGB::White,75);
- */
-  checkerFlash(CRGB::Purple,CRGB::White,  500, 5);
-  colorSwitch(CRGB::Purple,CRGB::White,  500, 5);
-     coil(CRGB::Purple,CRGB::White,75);
+
 
  
    
