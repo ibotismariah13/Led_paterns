@@ -194,78 +194,7 @@ void backwards (  long delayTime){
 
 void loop() {
   // put your main code here, to run repeatedly:
-/*   checkerFlash(CRGB::Blue,CRGB::Red,  500, 5);
-    colorSwitch(CRGB::Blue,CRGB::Red,  500, 5);
-    
-   checkerFlash(CRGB::Blue,CRGB::Yellow,  500,5);
-     colorSwitch(CRGB::Blue,CRGB::Yellow,  500,5);
-   
-    
-    checkerFlash(CRGB::Yellow,CRGB::Red,  500,5);
-      colorSwitch(CRGB::Yellow,CRGB::Red,  500,5);
-    
-    checkerFlash(CRGB::Blue,CRGB::Orange,  500,5);
-      colorSwitch(CRGB::Blue,CRGB::Orange,  500,5);
-    
-    checkerFlash(CRGB::Green,CRGB::Red,  500,5);
-     colorSwitch (CRGB::Green,CRGB::Red,  500,5);
-    
-  checkerFlash(CRGB::Purple,CRGB::Yellow,  500,5);
-    colorSwitch(CRGB::Purple,CRGB::Yellow,  500,5);
-  
-    checkerFlash(CRGB::Red,CRGB::White,  500,5);
-      colorSwitch(CRGB::Red,CRGB::White,  500,5);
-    
-   checkerFlash(CRGB::Orange,CRGB::White,  500,5);
-   colorSwitch  (CRGB::Orange,CRGB::White,  500,5);
-   
-  checkerFlash(CRGB::Yellow,CRGB::White,  500,5);
-   colorSwitch (CRGB::Yellow,CRGB::White,  500,5);
-  
-    checkerFlash(CRGB::Green,CRGB::White,  500,5);
-      colorSwitch(CRGB::Green,CRGB::White,  500,5);
-    
-  checkerFlash(CRGB::Blue,CRGB::White,  500,5);
-    colorSwitch(CRGB::Blue,CRGB::White,  500,5);
-  
-    checkerFlash(CRGB::Purple,CRGB::White,  500,5);
-     colorSwitch (CRGB::Purple,CRGB::White,  500,5);
-    
- checkerFlash(CRGB::Green,CRGB::Yellow,  500,5);
-   colorSwitch(CRGB::Green,CRGB::Yellow,  500,5);
- 
- checkerFlash(CRGB::Black,CRGB::Yellow,  500,5);
- (CRGB::Black,CRGB::Yellow,  500,5);
- 
-   checkerFlash(CRGB::Orange,CRGB::Maroon,  500,5);
-   colorSwitch  (CRGB::Orange,CRGB::Maroon,  500,5);
-   
-   checkerFlash(CRGB::Red,CRGB::White,  500,5);
-    colorSwitch (CRGB::Red,CRGB::White,  500,5);
 
-   
-    coil(CRGB::Blue,CRGB::Red,75);
-   coil(CRGB::Blue,CRGB::Yellow,75);
- coil(CRGB::Yellow,CRGB::Red,75);
- coil(CRGB::Blue,CRGB::Orange,75);
-   coil(CRGB::Green,CRGB::Red,75);
- coil(CRGB::Purple,CRGB::Yellow,75);
- coil(CRGB::Red,CRGB::White,75);
- coil(CRGB::Orange,CRGB::White,75);
- coil(CRGB::Yellow,CRGB::White,75);
-  coil(CRGB::Green,CRGB::White,75);
-  coil(CRGB::Blue,CRGB::White,75);
-    coil(CRGB::Purple,CRGB::White,75);
-  coil(CRGB::Green,CRGB::Yellow,75);
- coil(CRGB::Black,CRGB::Yellow,75);
- coil(CRGB::Orange,CRGB::Maroon,75);
- coil(CRGB::Red,CRGB::White,75);
- */
-  checkerFlash(CRGB::Purple,CRGB::White,  500, 5);
-  colorSwitch(CRGB::Purple,CRGB::White,  500, 5);
-     coil(CRGB::Purple,CRGB::White,75);
-
- 
    
 
 }
