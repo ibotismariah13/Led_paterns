@@ -12,12 +12,14 @@ void setup() {
   FastLED.setBrightness(BRIGHTNESS);// global brightness
 
 }
+//test if index is odd
 boolean ifOdd(int i){
   if (i%2 != 0){
     return true;
   }
   return false;
 }
+
 //switches off all leds
 void showProgramCleanUp(long delayTime) {
   for (int i = 0; i < NUM_LEDS; ++i) {
@@ -26,6 +28,7 @@ void showProgramCleanUp(long delayTime) {
   FastLED.show();
   delay(delayTime);
 }
+
 //switches the color of the whole strip
 void colorSwitch(CRGB color1, CRGB color2, long delayTime,int num) {
   for (int n=num; n>0; n--){
@@ -41,6 +44,7 @@ void colorSwitch(CRGB color1, CRGB color2, long delayTime,int num) {
   FastLED.show();
   delay(delayTime);
 }
+showProgramCleanUp(50);
 }
 
   //takes to color lights and makes them follow each other. 
@@ -61,13 +65,9 @@ void colorSwitch(CRGB color1, CRGB color2, long delayTime,int num) {
     FastLED.show();
     delay(delayTime);
    }
-   
+  
   }
 
-  
-    
-    
-    
   //flashes 2 differnt colors in alternating paterns 
     //varibles needed: 2 colors, time between flashes, number of lights same color, overall time
     void checkerFlashD( CRGB color1, CRGB color2,  long timeDelay){
@@ -103,6 +103,7 @@ void colorSwitch(CRGB color1, CRGB color2, long delayTime,int num) {
    showProgramCleanUp(10);
     delayTime = delayTime*.25;
     }
+    showProgramCleanUp(50);
     }
     //alternate flasshing
    void checkerFlash( CRGB color1, CRGB color2,  long delayTime, int num){
@@ -137,6 +138,7 @@ void colorSwitch(CRGB color1, CRGB color2, long delayTime,int num) {
    showProgramCleanUp(10);
 
     }
+    showProgramCleanUp(50);
     }
     
 // follows then follows back
@@ -148,12 +150,13 @@ void backwards (  long delayTime){
     FastLED.show();
     delay(delayTime);
    }
+   
 }
   void coil ( CRGB color1, CRGB color2,  long delayTime){
   follow(color1, color2, delayTime);
   backwards(delayTime);
 
-  
+  showProgramCleanUp(50);
 }
    
   // has two lights chase eachother 
@@ -191,7 +194,7 @@ void backwards (  long delayTime){
 
 void loop() {
   // put your main code here, to run repeatedly:
-   checkerFlash(CRGB::Blue,CRGB::Red,  500, 5);
+/*   checkerFlash(CRGB::Blue,CRGB::Red,  500, 5);
     colorSwitch(CRGB::Blue,CRGB::Red,  500, 5);
     
    checkerFlash(CRGB::Blue,CRGB::Yellow,  500,5);
@@ -257,6 +260,10 @@ void loop() {
  coil(CRGB::Black,CRGB::Yellow,75);
  coil(CRGB::Orange,CRGB::Maroon,75);
  coil(CRGB::Red,CRGB::White,75);
+ */
+  checkerFlash(CRGB::Purple,CRGB::White,  500, 5);
+  colorSwitch(CRGB::Purple,CRGB::White,  500, 5);
+     coil(CRGB::Purple,CRGB::White,75);
 
  
    
