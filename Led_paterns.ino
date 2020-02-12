@@ -3,13 +3,13 @@
 #define LED_TYPE WS2812B
 #define COLOR_ORDER GRB
 #define NUM_LEDS 150
-#define BRIGHTNESS 40
+int brightNum = 100;
 CRGB leds[NUM_LEDS];
 void setup() {
   // put your setup code here, to run once:
    delay(3000); // initial delay of a few seconds is recommended
-  FastLED.addLeds<LED_TYPE,DATA_PIN,COLOR_ORDER>(leds, NUM_LEDS).setCorrection(TypicalLEDStrip); // initializes LED strip
-  FastLED.setBrightness(BRIGHTNESS);// global brightness
+  FastLED.addLeds<LED_TYPE,DATA_PIN,COLOR_ORDER>(leds, NUM_LEDS); // initializes LED strip
+  FastLED.setBrightness(brightNum);// global brightNum
 
 }
 //test if index is odd
@@ -21,7 +21,7 @@ boolean ifOdd(int i){
 }
 
 //switches off all leds
-void showProgramCleanUp(long delayTime) {
+void lightsOff(long delayTime) {
   for (int i = 0; i < NUM_LEDS; ++i) {
     leds[i] = CRGB::Black;
   }
@@ -44,7 +44,7 @@ void colorSwitch(CRGB color1, CRGB color2, long delayTime,int num) {
   FastLED.show();
   delay(delayTime);
 }
-showProgramCleanUp(50);
+lightsOff(50);
 }
 
   //takes to color lights and makes them follow each other. 
@@ -86,7 +86,7 @@ showProgramCleanUp(50);
        }
     FastLED.show();
    delay(delayTime);
-   showProgramCleanUp(10);
+   lightsOff(10);
    
      for (int i = 0; i < NUM_LEDS; ++i) { 
        
@@ -100,10 +100,10 @@ showProgramCleanUp(50);
        }
      FastLED.show();
    delay(delayTime);
-   showProgramCleanUp(10);
+   lightsOff(10);
     delayTime = delayTime*.25;
     }
-    showProgramCleanUp(50);
+    lightsOff(50);
     }
     //alternate flasshing
    void checkerFlash( CRGB color1, CRGB color2,  long delayTime, int num){
@@ -121,7 +121,7 @@ showProgramCleanUp(50);
        }
     FastLED.show();
    delay(delayTime);
-   showProgramCleanUp(10);
+   lightsOff(10);
    
      for (int i = 0; i < NUM_LEDS; ++i) { 
        
@@ -135,10 +135,10 @@ showProgramCleanUp(50);
        }
      FastLED.show();
    delay(delayTime);
-   showProgramCleanUp(10);
+   lightsOff(10);
 
     }
-    showProgramCleanUp(50);
+    lightsOff(50);
     }
     
 // follows then follows back
@@ -156,26 +156,26 @@ void backwards (  long delayTime){
   follow(color1, color2, delayTime);
   backwards(delayTime);
 
-  showProgramCleanUp(50);
+  lightsOff(50);
 }
    
   // has two lights chase eachother 
      //varibles needed: 2 colors, time between flashes, number of lights same color, overall time
      
   // one color  and makes it pulse 
-     //varibles needed: 1 colors, time between flashes, number of lights same color, min and max brightness, overall time
+     //varibles needed: 1 colors, time between flashes, number of lights same color, min and max brightNum, overall time
      
   //checkers the lights
       //varibles needed: 2 colors, time, number of lights same color
       
   //checkers lights and pulses them
-     //varibles needed: 1 colors, time between flashes, number of lights same color, min and max brightness, overall time
+     //varibles needed: 1 colors, time between flashes, number of lights same color, min and max brightNum, overall time
      
   //one color wave
-    //varibles needed: 1 colors, time between flashes, number of lights same color, min and max brightness, overall time
+    //varibles needed: 1 colors, time between flashes, number of lights same color, min and max brightNum, overall time
     
   //one color shooting star
-    //varibles needed: 1 colors, time between flashes, number of lights same color, min and max brightness, overall time
+    //varibles needed: 1 colors, time between flashes, number of lights same color, min and max brightNum, overall time
     
   // two color shooting star
     //varibles needed: 2 colors, time between flashes, number of lights same color, min and max brightness, overall time
@@ -183,7 +183,7 @@ void backwards (  long delayTime){
 
   //Functions that do everything with 2 colors
   void show(CRGB color1,CRGB color2){
-     showProgramCleanUp(1000);
+     lightsOff(1000);
     checkerFlashD( color1, color2,  1500);
     coil (color1, color2, 100);
     checkerFlash( color1, color2,  500,10);
