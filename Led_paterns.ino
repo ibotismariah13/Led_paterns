@@ -2,7 +2,7 @@
 #define DATA_PIN 3
 #define LED_TYPE WS2812B
 #define COLOR_ORDER GRB
-#define NUM_LEDS 150
+#define NUM_LEDS 55
 #define BRIGHTNESS 40
 CRGB leds[NUM_LEDS];
 void setup() {
